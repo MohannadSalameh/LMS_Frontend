@@ -1,0 +1,219 @@
+.cards_container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 1fr));
+  gap: clamp(16px, 3vw, 24px);
+  padding: clamp(20px, 5vw, 40px);
+  background-color: #f5f7fa;
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+
+
+.card {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+  padding: clamp(12px, 2.5vw, 16px);
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  align-items: center;
+  height: 240px;
+  width: 100%;
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+  justify-content: space-between;
+}
+
+.card:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+  background-color: #e0f2fe;
+}
+
+.logo {
+  width: clamp(40px, 10vw, 50px);
+  height: clamp(40px, 10vw, 50px);
+  border-radius: 8px;
+  object-fit: cover;
+  border: 2px solid #3b82f6;
+  flex-shrink: 0;
+}
+
+.card_body {
+  text-align: center;
+  width: 100%;
+  margin-top: 8px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  min-height: 0;
+}
+
+.card_body h3 {
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
+  color: #0c4a6e;
+  margin-bottom: 6px;
+  line-height: 1.3;
+  word-wrap: break-word;
+  hyphens: auto;
+  height: 1.8em;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.card_body p {
+  font-size: clamp(0.8rem, 2vw, 0.9rem);
+  color: #475569;
+  margin: 4px 0;
+  line-height: 1.4;
+  word-wrap: break-word;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.description {
+  font-style: italic;
+  font-size: 0.85rem;
+  color: #64748b;
+  height: 2.2em;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  margin-bottom: 8px;
+}
+
+.enrollButton {
+  margin-top: auto;
+  padding: clamp(6px, 1.5vw, 10px) clamp(12px, 3vw, 16px);
+  background-color: rgba(27, 108, 221, 0.995);
+  color: white;
+  font-weight: 600;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: clamp(0.8rem, 2vw, 0.9rem);
+  min-height: 44px;
+  width: 100%;
+  max-width: 200px;
+  align-self: center;
+}
+
+.enrollButton:hover {
+  background-color: #1e6ad3;
+}
+
+/* Enhanced Responsive Design */
+
+/* Extra small devices (up to 480px) */
+@media (max-width: 480px) {
+  .cards_container {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding: 16px;
+  }
+  
+  .card {
+    min-height: 200px;
+  }
+  
+  .card:hover {
+    transform: translateY(-2px) scale(1.01);
+  }
+}
+
+/* Small devices (481px to 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+  .cards_container {
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  }
+}
+
+/* Medium devices (769px to 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .cards_container {
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  }
+}
+
+/* Large devices (1025px to 1200px) */
+@media (min-width: 1025px) and (max-width: 1200px) {
+  .cards_container {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  }
+}
+
+/* Extra large devices (above 1200px) */
+@media (min-width: 1201px) {
+  .cards_container {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
+}
+
+/* Landscape orientation optimizations */
+@media (max-width: 768px) and (orientation: landscape) {
+  .cards_container {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    padding: 12px;
+  }
+  
+  .card {
+    min-height: 240px;
+  }
+}
+
+/* Touch device optimizations */
+@media (hover: none) and (pointer: coarse) {
+  .card:hover {
+    transform: none;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+  }
+  
+  .card:active {
+    transform: scale(0.98);
+    transition: transform 0.1s ease;
+  }
+  
+  .enrollButton:hover {
+    background-color: rgba(27, 108, 221, 0.995);
+  }
+  
+  .enrollButton:active {
+    transform: scale(0.95);
+  }
+}
+
+/* High DPI displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .card {
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.06);
+  }
+  
+  .card:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.12);
+  }
+}
+
+/* Reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .card,
+  .enrollButton {
+    transition: none;
+  }
+  
+  .card:hover {
+    transform: none;
+  }
+}

@@ -1,0 +1,99 @@
+.hero {
+  height: 100vh;
+  background-color: rgba(27, 108, 221, 0.995);
+  background-image: url("../../../assets/images/landing-hero.png");
+  background-size: cover;
+  background-position: center left;
+  position: relative;
+  display: flex;
+  justify-content: flex-start; /* Align left horizontally */
+  align-items: center; /* Align center vertically */
+  padding: 5%;
+  box-sizing: border-box;
+  flex-direction: column;
+}
+
+.overlay {
+  width: 500px; /* Pin the width solid */
+  padding: 20px;
+  background-color: rgba(27, 108, 221, 0.434);
+  backdrop-filter: blur(6px);
+  border-radius: 16px;
+  color: white;
+  box-sizing: border-box;
+  text-align: left;
+  margin-left: -600px; /* Push it more left */
+  margin-top: 80px; /* Push it more down */
+  word-wrap: break-word; /* Wrap long text instead of overflowing */
+}
+
+.heading {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #ffffff;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  color: #ffffff;
+  border-radius: 6px;
+  min-height: 45px;
+  white-space: normal; /* Allow multi-line text */
+  overflow: hidden;
+  max-width: 100%;
+}
+
+.cursor {
+  display: inline-block;
+  margin-left: 2px;
+  color: #ffffff;
+  animation: blink 0.8s infinite;
+}
+
+/* Responsive tweaks 📱 */
+@media (max-width: 768px) {
+  .hero {
+    align-items: flex-start;
+    justify-content: center;
+    padding: 10% 5%;
+  }
+
+  .overlay {
+    width: 80%; /* Let it be full width */
+    margin-left: 0; /* Remove the left push */
+    margin-top: 30px; /* Give some top spacing */
+    padding: 16px;
+    box-sizing: border-box;
+  }
+
+  .heading {
+    font-size: 1.8rem;
+    text-align: left;
+  }
+
+  .subtitle {
+    font-size: 1.2rem;
+    white-space: normal;
+    text-align: left;
+  }
+}
+
+@media (max-width: 1024px) {
+  .overlay {
+    margin-left: -400px; /* Tuck it in a bit for 1024px */
+    margin-top: 60px;
+  }
+}
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}

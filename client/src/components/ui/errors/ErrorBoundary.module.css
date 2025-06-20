@@ -1,0 +1,43 @@
+/* src/components/ui/errors/ErrorBoundary.module.css */
+.errorContainer {
+  padding: 2rem;
+  border: 1px solid #ff6b6b;
+  border-radius: 8px;
+  background-color: #fff5f5;
+  margin: 1rem;
+}
+
+.errorTitle {
+  color: #ff6b6b;
+  margin-bottom: 1rem;
+}
+
+.errorMessage {
+  color: #495057;
+  margin-bottom: 1rem;
+}
+
+.errorDetails {
+  margin-bottom: 1rem;
+}
+
+.errorStack {
+  font-family: monospace;
+  font-size: 0.9rem;
+  color: #868e96;
+  white-space: pre-wrap;
+}
+
+.retryButton {
+  background-color: #ff6b6b;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.retryButton:hover {
+  background-color: #fa5252;
+}

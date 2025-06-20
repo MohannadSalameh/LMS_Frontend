@@ -1,0 +1,123 @@
+.dashboard {
+  padding: 2rem;
+  background-color: #f9f9f9;
+  min-height: 100vh;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.card {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive Media Queries */
+
+/* Mobile devices (up to 768px) */
+@media (max-width: 768px) {
+  .dashboard {
+    padding: 1rem;
+  }
+  
+  .header {
+    margin-bottom: 1.5rem;
+  }
+  
+  .header h1 {
+    font-size: 1.8rem;
+  }
+  
+  .content {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .card {
+    padding: 1.2rem;
+    margin: 0;
+  }
+}
+
+/* Tablet devices (769px to 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .dashboard {
+    padding: 1.5rem;
+  }
+  
+  .content {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.2rem;
+  }
+}
+
+/* Large tablets and small desktops (1025px to 1200px) */
+@media (min-width: 1025px) and (max-width: 1200px) {
+  .content {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Large screens (above 1200px) */
+@media (min-width: 1201px) {
+  .dashboard {
+    padding: 2.5rem;
+  }
+  
+  .content {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+  }
+}
+
+/* Mobile landscape orientation */
+@media (max-width: 768px) and (orientation: landscape) {
+  .dashboard {
+    padding: 0.8rem;
+  }
+  
+  .header {
+    margin-bottom: 1rem;
+  }
+  
+  .content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Touch device optimizations */
+@media (hover: none) and (pointer: coarse) {
+  .card {
+    min-height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .card:hover {
+    transform: none;
+  }
+  
+  .card:active {
+    transform: scale(0.98);
+  }
+}

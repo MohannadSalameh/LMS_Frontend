@@ -1,0 +1,335 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 2rem;
+  background-color: #f8fafc;
+}
+
+.card {
+  background: white;
+  border-radius: 12px;
+  padding: 3rem;
+  width: 100%;
+  max-width: 450px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.title {
+  font-size: 1.8rem;
+  color: #1b6cdd;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.subtitle {
+  color: #64748b;
+  font-size: 0.95rem;
+}
+
+.error {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.8rem 1rem;
+  background-color: #fff5f5;
+  color: #dc2626;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+  border: 1px solid #fed7d7;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.inputGroup {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.inputIcon {
+  position: absolute;
+  right: 1rem;
+  color: #94a3b8;
+  font-size: 1.1rem;
+  pointer-events: none;
+}
+
+.input {
+  padding: 15px !important;
+  width: 100%;
+  padding: 0.9rem 3.5rem 0.9rem 1rem;
+  border: 1px solid #e2e8f0 !important;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  color: #1e293b;
+  transition: all 0.2s ease;
+  background-color: #f8fafc;
+}
+
+.input:focus {
+  outline: none;
+  border-color: #1b6cdd !important;
+  background-color: white !important;
+  box-shadow: 0 0 0 3px rgba(27, 108, 221, 0.1);
+}
+
+.input::placeholder {
+  color: #94a3b8;
+}
+
+.toggleButton {
+  position: absolute;
+  right: 3rem;
+  background: none;
+  border: none;
+  color: #94a3b8;
+  font-size: 1.25rem;
+  cursor: pointer;
+  padding: 0.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.toggleButton:hover {
+  color: #1b6cdd;
+}
+
+.submitButton {
+  background: #1b6cdd;
+  color: white;
+  padding: 1rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-top: 0.5rem;
+}
+
+.submitButton:hover {
+  background: #1557b8;
+}
+
+.submitButton:disabled {
+  background: #93c5fd;
+  cursor: not-allowed;
+}
+
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.spinner {
+  width: 1rem;
+  height: 1rem;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: white;
+  animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.signupPrompt {
+  text-align: center;
+  margin-top: 1.5rem;
+  color: #64748b;
+  font-size: 0.9rem;
+}
+
+.signupLink {
+  color: #1b6cdd;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.signupLink:hover {
+  text-decoration: underline;
+}
+
+/* Responsive adjustments */
+/* Mobile devices (320px - 767px) */
+@media (max-width: 767px) {
+  .container {
+    padding: 1rem;
+    min-height: 100vh;
+  }
+
+  .card {
+    padding: 1.5rem;
+    max-width: 100%;
+    margin: 0;
+    border-radius: 8px;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .subtitle {
+    font-size: 0.9rem;
+  }
+
+  .input {
+    padding: 0.8rem 3rem 0.8rem 0.9rem;
+    font-size: 0.9rem;
+  }
+
+  .submitButton {
+    padding: 0.9rem;
+    font-size: 0.95rem;
+  }
+
+  .error {
+    padding: 0.7rem 0.9rem;
+    font-size: 0.85rem;
+  }
+}
+
+/* Small mobile devices (320px - 480px) */
+@media (max-width: 480px) {
+  .container {
+    padding: 0.5rem;
+  }
+
+  .card {
+    padding: 1.25rem;
+    border-radius: 6px;
+  }
+
+  .title {
+    font-size: 1.4rem;
+  }
+
+  .header {
+    margin-bottom: 2rem;
+  }
+
+  .form {
+    gap: 1rem;
+  }
+
+  .input {
+    padding: 0.75rem 2.8rem 0.75rem 0.8rem;
+    font-size: 0.85rem;
+  }
+
+  .inputIcon {
+    right: 0.8rem;
+    font-size: 1rem;
+  }
+
+  .toggleButton {
+    right: 2.5rem;
+    font-size: 1.1rem;
+  }
+
+  .submitButton {
+    padding: 0.8rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* Tablet devices (768px - 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .container {
+    padding: 2.5rem;
+  }
+
+  .card {
+    padding: 2.5rem;
+    max-width: 400px;
+  }
+
+  .title {
+    font-size: 1.7rem;
+  }
+}
+
+/* Large tablets and small desktops (1025px - 1200px) */
+@media (min-width: 1025px) and (max-width: 1200px) {
+  .card {
+    max-width: 420px;
+    padding: 2.8rem;
+  }
+
+  .title {
+    font-size: 1.75rem;
+  }
+}
+
+/* Large desktops (1201px and above) */
+@media (min-width: 1201px) {
+  .card {
+    max-width: 450px;
+    padding: 3rem;
+  }
+
+  .title {
+    font-size: 1.8rem;
+  }
+}
+
+/* Mobile landscape orientation */
+@media (max-width: 767px) and (orientation: landscape) {
+  .container {
+    padding: 1rem 2rem;
+  }
+
+  .card {
+    padding: 1.5rem 2rem;
+  }
+
+  .header {
+    margin-bottom: 1.5rem;
+  }
+
+  .form {
+    gap: 1rem;
+  }
+}
+
+/* Touch devices optimization */
+@media (hover: none) and (pointer: coarse) {
+  .submitButton {
+    min-height: 44px;
+  }
+
+  .input {
+    min-height: 44px;
+  }
+
+  .toggleButton {
+    min-width: 44px;
+    min-height: 44px;
+  }
+}
+
+/* High DPI displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .card {
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  }
+}

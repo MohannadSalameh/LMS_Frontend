@@ -1,0 +1,354 @@
+.landingPage {
+  font-family: "Segoe UI", sans-serif;
+}
+
+.hero {
+  background: linear-gradient(to right, #1b6cdd, #63a4ff);
+  color: white;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.heroButtons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.primaryBtn,
+.secondaryBtn {
+  padding: 12px 24px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.primaryBtn {
+  background-color: white;
+  border: 2px solid white;
+  color: #1b6cdd;
+}
+
+.primaryBtn:hover {
+  background-color: #1b6cdd;
+  color: white;
+}
+
+.secondaryBtn {
+  background-color: white;
+  border: 2px solid white;
+  color: #1b6cdd;
+}
+
+.secondaryBtn:hover {
+  background-color: #1b6cdd;
+  color: white;
+}
+.howItWorks{
+background-color: #1b6cdd;
+color: white;
+font-size: large;
+
+}
+.featuredCourses,
+.howItWorks,
+.testimonials,
+.categories,
+.whyEvolve,
+.newsletter,
+.finalCTA {
+  padding: clamp(20px, 5vw, 60px) clamp(16px, 4vw, 40px);
+  text-align: center;
+}
+
+.featuredCourses {
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  border-radius: 16px;
+  margin: clamp(16px, 3vw, 32px);
+}
+
+.featuredCourses h2 {
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  margin-bottom: clamp(16px, 3vw, 32px);
+  color: #1e293b;
+  font-weight: 700;
+}
+
+.courseGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(280px, 100%), 1fr));
+  gap: clamp(16px, 3vw, 24px);
+  margin-top: clamp(20px, 4vw, 32px);
+  padding: 0 clamp(8px, 2vw, 16px);
+}
+
+.testimonialGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+  gap: clamp(16px, 3vw, 24px);
+  margin-top: clamp(20px, 4vw, 32px);
+}
+
+.categoryGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(250px, 100%), 1fr));
+  gap: clamp(16px, 3vw, 24px);
+  margin-top: clamp(20px, 4vw, 32px);
+}
+
+.courseCard,
+.testimonial,
+.categoryCard {
+  background-color: white;
+  padding: clamp(12px, 2.5vw, 16px);
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid rgba(226, 232, 240, 0.8);
+  width: 100%;
+  box-sizing: border-box;
+  height: 240px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.courseCard {
+  height: 320px;
+}
+
+.testimonial {
+  height: 240px;
+}
+
+.categoryCard {
+  height: 240px;
+}
+
+.courseCard:hover,
+.categoryCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  border-color: #3b82f6;
+}
+
+.rating {
+  color: gold;
+}
+
+.steps {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.step span {
+  font-size: 2rem;
+border-radius: 20px;
+padding: 10px;
+background-color: rgba(255, 255, 255, 0.548);
+}
+
+.step p {
+  margin-top: 10px;
+}
+
+.reasons {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+
+.newsletterForm {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.newsletterForm input {
+  padding: 10px 20px;
+  border-radius: 25px;
+  border: 1px solid #ccc;
+  width: 250px;
+}
+
+.newsletterForm button {
+  padding: 10px 20px;
+  border-radius: 25px;
+  background-color: #1b6cdd;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.newsletterForm button:hover {
+  background-color: #155ab6;
+}
+
+.finalCTA div {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+
+
+.avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+  border: 2px solid #3b82f6;
+}
+
+.badge {
+  display: inline-block;
+  background-color: #dbeafe;
+  color: #1e40af;
+  font-size: 0.75rem;
+  padding: 4px 10px;
+  border-radius: 20px;
+  margin-top: 8px;
+  font-weight: 500;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero {
+    padding: clamp(30px, 8vw, 50px) clamp(16px, 4vw, 20px);
+  }
+  
+  .hero h1 {
+    font-size: clamp(1.5rem, 6vw, 2rem);
+    line-height: 1.2;
+  }
+  
+  .hero p {
+    font-size: clamp(1rem, 3vw, 1.1rem);
+  }
+  
+  .heroButtons {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+  
+  .primaryBtn,
+  .secondaryBtn {
+    width: 100%;
+    max-width: 280px;
+    padding: 14px 20px;
+    font-size: 1rem;
+  }
+  
+  .courseGrid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding: 0 8px;
+  }
+  
+  .testimonialGrid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  
+  .categoryGrid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+  }
+  
+  .steps {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .step {
+    max-width: 200px;
+  }
+  
+  .newsletterForm {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+  
+  .newsletterForm input {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .courseGrid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+  
+  .testimonialGrid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+  
+  .categoryGrid {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
+}
+
+@media (min-width: 1025px) {
+  .courseGrid {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
+  
+  .testimonialGrid {
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  }
+}
+
+@media (orientation: landscape) and (max-height: 600px) {
+  .hero {
+    padding: 30px 20px;
+  }
+  
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .courseCard,
+  .categoryCard,
+  .testimonial {
+    transition: none;
+  }
+  
+  .courseCard:hover,
+  .categoryCard:hover {
+    transform: none;
+  }
+}
+
+@media (hover: none) {
+  .courseCard:hover,
+  .categoryCard:hover {
+    transform: none;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+}

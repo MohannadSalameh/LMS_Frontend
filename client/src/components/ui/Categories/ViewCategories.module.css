@@ -1,0 +1,171 @@
+.categorySection{
+  padding: clamp(20px, 5vw, 40px) clamp(16px, 4vw, 20px);
+  text-align: center;
+  align-items: center;
+  background-color: #1b6cdd;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 180px), 1fr));
+  gap: clamp(16px, 3vw, 20px);
+  margin-top: 20px;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.categoryHeader{
+  color: white;
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  margin-bottom: clamp(16px, 3vw, 20px);
+  line-height: 1.2;
+}
+
+.card {
+  background-color: white;
+  color: #1b6cdd;
+  padding: clamp(16px, 4vw, 20px);
+  border: 2px solid white;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  min-height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  hyphens: auto;
+}
+
+.card:hover {
+  background-color: #b7cdec;
+  color: #1b6cdd;
+  transform: scale(1.05);
+}
+
+.loading,
+.error {
+  padding: 20px;
+  text-align: center;
+  font-weight: bold;
+  color: #1b6cdd;
+}
+
+/* Enhanced Responsive Design */
+
+/* Extra small devices (up to 480px) */
+@media (max-width: 480px) {
+  .categorySection {
+    padding: 16px;
+  }
+
+  .grid {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 12px;
+  }
+
+  .card {
+    min-height: 70px;
+    font-size: clamp(0.9rem, 3vw, 1rem);
+  }
+
+  .card:hover {
+    transform: scale(1.02);
+  }
+}
+
+/* Small devices (481px to 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  }
+
+  .card {
+    min-height: 75px;
+  }
+}
+
+/* Medium devices (769px to 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+  }
+}
+
+/* Large devices (1025px to 1200px) */
+@media (min-width: 1025px) and (max-width: 1200px) {
+  .grid {
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  }
+}
+
+/* Extra large devices (above 1200px) */
+@media (min-width: 1201px) {
+  .grid {
+    grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+  }
+}
+
+/* Landscape orientation optimizations */
+@media (max-width: 768px) and (orientation: landscape) {
+  .categorySection {
+    padding: 12px 20px;
+  }
+
+  .grid {
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  }
+
+  .card {
+    min-height: 60px;
+  }
+}
+
+/* Touch device optimizations */
+@media (hover: none) and (pointer: coarse) {
+  .card {
+    min-height: 88px;
+  }
+
+  .card:hover {
+    transform: none;
+    background-color: white;
+  }
+
+  .card:active {
+    transform: scale(0.98);
+    background-color: #f0f8ff;
+    transition: all 0.1s ease;
+  }
+}
+
+/* High DPI displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .card {
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.06);
+  }
+
+  .card:hover {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+  }
+}
+
+/* Reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .card {
+    transition: none;
+  }
+
+  .card:hover {
+    transform: none;
+  }
+}
