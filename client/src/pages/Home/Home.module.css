@@ -1,0 +1,361 @@
+
+
+.footer {
+  background-color: rgba(27, 108, 221, 0.995); /* Matching the hero/header blue */
+  padding: 40px 20px 20px;
+  font-family: "Segoe UI", sans-serif;
+  color: white; /* White text for contrast */
+  border-top: 2px solid rgba(255, 255, 255, 0.15); /* Slightly stronger subtle white border */
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1); /* Soft shadow like header's */
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: auto;
+  gap: 40px;
+}
+
+.logoSection {
+  flex: 1 1 200px;
+}
+
+.logo {
+  width: 60px;
+  margin-bottom: 10px;
+border-radius: 50%;
+border: 1px solid white;
+}
+
+.motto {
+  font-style: italic;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.85); /* Slightly brighter */
+}
+
+.menu {
+  flex: 1 1 150px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.menu h3 {
+  font-size: 16px;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.menu a {
+  color: rgba(255, 255, 255, 0.85);
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.menu a:hover {
+  color: #d1d1ff; /* Light bluish for hover, matching header hover vibe */
+  transform: translateX(5px);
+}
+
+.social {
+  flex: 1 1 150px;
+}
+
+.social h3 {
+  font-size: 16px;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.icons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.icons a {
+  color: rgba(255, 255, 255, 0.85);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.icons a:hover {
+  color: #d1d1ff;
+}
+
+.copy {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* Responsive Media Queries */
+
+/* Mobile devices (up to 768px) */
+@media (max-width: 768px) {
+  .footer {
+    padding: 30px 15px 15px;
+  }
+  
+  .container {
+    flex-direction: column;
+    gap: 25px;
+    text-align: center;
+  }
+  
+  .logoSection {
+    flex: none;
+    order: 1;
+  }
+  
+  .menu {
+    flex: none;
+    order: 2;
+  }
+  
+  .social {
+    flex: none;
+    order: 3;
+  }
+  
+  .menu h3, .social h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+  
+  .icons {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+  
+  .copy {
+    margin-top: 25px;
+    font-size: 13px;
+  }
+}
+
+/* Tablet devices (769px to 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .footer {
+    padding: 35px 18px 18px;
+  }
+  
+  .container {
+    gap: 30px;
+  }
+  
+  .logoSection {
+    flex: 1 1 180px;
+  }
+  
+  .menu {
+    flex: 1 1 140px;
+  }
+  
+  .social {
+    flex: 1 1 140px;
+  }
+}
+
+/* Large screens (above 1200px) */
+@media (min-width: 1201px) {
+  .footer {
+    padding: 45px 25px 25px;
+  }
+  
+  .container {
+    gap: 45px;
+  }
+}
+
+/* Touch device optimizations */
+@media (hover: none) and (pointer: coarse) {
+  .menu a, .icons a {
+    padding: 8px 0;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .menu a:hover, .icons a:hover {
+    transform: none;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    padding-left: 8px;
+  }
+}
+
+/* Enhanced Animations and Styles for Home Page */
+
+/* Keyframe Animations */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Hero Section Enhancements */
+.heroSection {
+  position: relative;
+  overflow: hidden;
+}
+
+.heroContent {
+  animation: fadeInUp 1s ease-out;
+}
+
+.heroTitle {
+  animation: slideInLeft 1s ease-out 0.2s both;
+}
+
+.heroSubtitle {
+  animation: slideInRight 1s ease-out 0.4s both;
+}
+
+.heroButtons {
+  animation: fadeInUp 1s ease-out 0.6s both;
+}
+
+/* Card Hover Effects */
+.courseCard {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform, box-shadow;
+}
+
+.courseCard:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15) !important;
+}
+
+.courseCard:active {
+  transform: translateY(-4px) scale(1.01);
+}
+
+.categoryCard {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform, box-shadow;
+}
+
+.categoryCard:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12) !important;
+}
+
+.categoryCard:active {
+  transform: translateY(-3px);
+}
+
+/* Stats Animation */
+.statsContainer {
+  animation: fadeInUp 1s ease-out;
+}
+
+.statItem {
+  transition: all 0.3s ease;
+  will-change: transform;
+}
+
+.statItem:hover {
+  transform: translateY(-4px);
+}
+
+/* Button Enhancements */
+.ctaButton {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform, box-shadow;
+}
+
+.ctaButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15) !important;
+}
+
+.ctaButton:active {
+  transform: translateY(0);
+}
+
+/* Image Optimizations */
+.courseImage {
+  transition: transform 0.3s ease;
+  will-change: transform;
+}
+
+.courseImage:hover {
+  transform: scale(1.05);
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  
+  .courseCard:hover,
+  .categoryCard:hover,
+  .statItem:hover,
+  .ctaButton:hover {
+    transform: none;
+  }
+}
+
+/* Enhanced Mobile Responsiveness */
+@media (max-width: 480px) {
+  .courseCard:hover {
+    transform: translateY(-2px);
+  }
+  
+  .categoryCard:hover {
+    transform: translateY(-2px);
+  }
+}
+
+/* Focus styles for accessibility */
+.courseCard:focus,
+.categoryCard:focus,
+.ctaButton:focus {
+  outline: 2px solid #1976d2;
+  outline-offset: 2px;
+}

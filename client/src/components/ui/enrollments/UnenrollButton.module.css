@@ -1,0 +1,32 @@
+.unenrollBtn {
+  background-color: #2d89ef;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border: none;
+margin: 10px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.unenrollBtn:hover {
+  background-color: #c9302c;
+}
+
+.message {
+  margin-top: 0.5rem;
+  font-size: 0.95rem;
+}
+
+.success {
+  color: green;
+}
+
+.error {
+  color: red;
+}
+
+.info {
+  color: #555;
+}

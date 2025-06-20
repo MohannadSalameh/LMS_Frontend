@@ -1,0 +1,64 @@
+.categoryCourses {
+  padding: 40px;
+  background-color: #f9fafb; /* Light neutral background */
+  text-align: center;
+}
+
+.categoryCourses h2 {
+  font-size: 2rem;
+  color: #0c4a6e; /* Deep blue */
+  margin-bottom: 30px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+  justify-items: center;
+}
+
+.card {
+  width: 100%;
+  max-width: 300px;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+  padding: 20px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+  background-color: #e0f2fe;
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 2px solid #3b82f6;
+  margin-bottom: 15px;
+}
+
+.card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #0c4a6e;
+}
+
+.card p {
+  font-size: 0.95rem;
+  color: #475569;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Responsive Fixes */
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
+}

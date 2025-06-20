@@ -1,0 +1,129 @@
+.container {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 90%;
+  box-sizing: border-box;
+}
+
+.title {
+  text-align: center;
+  color: #007bff;
+  margin-bottom: 1rem;
+  user-select: none;
+  font-weight: 700;
+  font-size: 1.8rem;
+}
+
+/* Input and button container */
+.inputGroup {
+  display: flex;
+  gap: 0.5rem;
+}
+
+/* Input styling */
+.input {
+  flex-grow: 1;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1.8px solid #ddd;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.input:focus {
+  border-color: #007bff;
+}
+
+/* Button styling */
+.button {
+  background-color: #007bff;
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 0 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #0056b3;
+}
+
+/* Task list */
+.taskList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-height: 320px;
+  overflow-y: auto;
+}
+
+/* Empty state */
+.emptyState {
+  text-align: center;
+  color: #666;
+  padding: 1rem 0;
+}
+
+/* Individual task */
+.taskItem {
+  margin-bottom: 0.6rem;
+  padding: 0.9rem 1.2rem;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  cursor: pointer;
+  user-select: none;
+  transition: background-color 0.3s ease;
+  background-color: #f8f9fa;
+  color: #212529;
+  font-size: 1rem;
+}
+
+.taskItem.completed {
+  background-color: #d1e7dd;
+  color: #0f5132;
+  text-decoration: line-through;
+}
+
+.taskItem button {
+  background: none;
+  border: none;
+  color: #dc3545;
+  font-weight: 700;
+  font-size: 1.4rem;
+  cursor: pointer;
+  padding-left: 1rem;
+  user-select: none;
+  line-height: 1;
+}
+
+/* Responsive tweaks */
+@media (max-width: 600px) {
+  .inputGroup {
+    flex-direction: column;
+  }
+  
+  .button {
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 1.1rem;
+  }
+  
+  .input {
+    width: 100%;
+  }
+}

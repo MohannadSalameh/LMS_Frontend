@@ -1,0 +1,101 @@
+.contact-container {
+  max-width: 700px;
+  margin: 2rem auto;
+  padding: 1rem 2rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  background: #fafafa;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+h1 {
+  text-align: center;
+  color: #005f99;
+  margin-bottom: 1rem;
+}
+
+.contact-intro {
+  text-align: center;
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
+.contact-form label {
+  display: block;
+  margin: 0.75rem 0 0.25rem;
+  font-weight: 600;
+}
+
+.required {
+  color: red;
+  margin-left: 0.2rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  font-size: 1rem;
+  border: 1.5px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #0077cc;
+  outline: none;
+}
+
+.input-error {
+  border-color: #e74c3c;
+}
+
+.error-text {
+  color: #e74c3c;
+  font-size: 0.875rem;
+  margin-top: 0.2rem;
+}
+
+.btn-submit {
+  margin-top: 1.5rem;
+  width: 100%;
+  background-color: #0077cc;
+  color: white;
+  padding: 0.75rem;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.btn-submit:hover {
+  background-color: #005f99;
+}
+
+.success-message {
+  background-color: #d4edda;
+  border: 1px solid #c3e6cb;
+  color: #155724;
+  padding: 1rem;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.contact-info {
+  margin-top: 2rem;
+  background: #e8f4fa;
+  padding: 1rem 1.5rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  color: #004a75;
+}
+
+.contact-info h2 {
+  margin-bottom: 1rem;
+}

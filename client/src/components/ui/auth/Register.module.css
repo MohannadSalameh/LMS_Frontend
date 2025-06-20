@@ -1,0 +1,211 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 2rem;
+  background-color: #f8fafc;
+}
+
+.card {
+  background: white;
+  border-radius: 12px;
+  padding: 3rem;
+  width: 100%;
+  max-width: 450px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.title {
+  font-size: 1.8rem;
+  color: #1b6cdd;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.subtitle {
+  color: #64748b;
+  font-size: 0.95rem;
+}
+
+.error {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.8rem 1rem;
+  background-color: #fff5f5;
+  color: #dc2626;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+  border: 1px solid #fed7d7;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.inputGroup {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.inputIcon {
+  position: absolute;
+  right: 1rem;
+  color: #94a3b8;
+  font-size: 1.1rem;
+  pointer-events: none;
+}
+
+.input {
+  padding: 15px !important;
+  width: 100%;
+  padding: 0.9rem 3.5rem 0.9rem 1rem;
+  border: 1px solid #e2e8f0 !important;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  color: #1e293b;
+  transition: all 0.2s ease;
+  background-color: #f8fafc;
+}
+
+.input:focus {
+  outline: none;
+  border-color: #1b6cdd !important;
+  background-color: white !important;
+  box-shadow: 0 0 0 3px rgba(27, 108, 221, 0.1);
+}
+
+.input::placeholder {
+  color: #94a3b8;
+}
+
+.submitButton {
+  background: #1b6cdd;
+  color: white;
+  padding: 1rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-top: 0.5rem;
+}
+
+.submitButton:hover {
+  background: #1557b8;
+}
+
+.submitButton:disabled {
+  background: #93c5fd;
+  cursor: not-allowed;
+}
+
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.spinner {
+  width: 1rem;
+  height: 1rem;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: white;
+  animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  margin: 1.5rem 0;
+  color: #94a3b8;
+  font-size: 0.85rem;
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: #e2e8f0;
+  margin: 0 0.5rem;
+}
+
+.googleButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 0.9rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  background: white;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  color: #334155;
+}
+
+.googleButton:hover {
+  background: #1b6cdd;
+  color: white;
+}
+
+.googleIcon {
+  font-size: 1.1rem;
+  color: #db4437;
+}
+
+
+.loginPrompt {
+  text-align: center;
+  margin-top: 1.5rem;
+  color: #64748b;
+  font-size: 0.9rem;
+}
+
+.loginLink {
+  color: #1b6cdd;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.loginLink:hover {
+  text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .container {
+    padding: 1.5rem;
+  }
+
+  .card {
+    padding: 2rem 1.5rem;
+  }
+
+  .title {
+    font-size: 1.6rem;
+  }
+}

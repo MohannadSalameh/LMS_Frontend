@@ -1,0 +1,277 @@
+/* Settings.module.css */
+
+.container {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 24px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 12px;
+}
+
+.header h1 {
+  font-size: 28px;
+  font-weight: 600;
+  margin: 0;
+  color: #2c3e50;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.section {
+  background-color: #fff;
+  padding: 16px 20px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+}
+
+.section h2 {
+  font-size: 20px;
+  margin-bottom: 16px;
+  color: #34495e;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  font-weight: 500;
+  margin-bottom: 16px;
+  font-size: 14px;
+  color: #555;
+}
+
+input[type="text"],
+input[type="email"] {
+  margin-top: 6px;
+  padding: 10px 14px;
+  border: 1.5px solid #bbb;
+  border-radius: 4px;
+  font-size: 15px;
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus {
+  border-color: #2980b9;
+  outline: none;
+  background-color: #f0f8ff;
+}
+
+.checkboxLabel {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 500;
+  font-size: 15px;
+  cursor: pointer;
+  user-select: none;
+  color: #444;
+}
+
+.checkboxLabel input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+}
+
+.saveButton {
+  align-self: flex-start;
+  background-color: #2980b9;
+  color: #fff;
+  border: none;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.saveButton:disabled {
+  background-color: #7fb1d6;
+  cursor: not-allowed;
+}
+
+.saveButton:hover:not(:disabled) {
+  background-color: #1b598a;
+}
+
+.error {
+  color: #c0392b;
+  font-weight: 600;
+  margin-top: -12px;
+  margin-bottom: 12px;
+}
+
+.success {
+  color: #27ae60;
+  font-weight: 600;
+  margin-top: -12px;
+  margin-bottom: 12px;
+}
+
+/* Responsive design */
+/* Mobile devices (320px - 767px) */
+@media (max-width: 767px) {
+  .container {
+    margin: 20px auto;
+    padding: 16px;
+    max-width: 100%;
+  }
+
+  .header h1 {
+    font-size: 24px;
+  }
+
+  .section {
+    padding: 12px 16px;
+  }
+
+  .section h2 {
+    font-size: 18px;
+    margin-bottom: 12px;
+  }
+
+  .form {
+    gap: 16px;
+  }
+
+  label {
+    font-size: 14px;
+  }
+
+  input, select, textarea {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .saveButton {
+    padding: 12px 20px;
+    font-size: 14px;
+  }
+}
+
+/* Small mobile devices (320px - 480px) */
+@media (max-width: 480px) {
+  .container {
+    margin: 10px;
+    padding: 12px;
+  }
+
+  .header {
+    gap: 8px;
+    margin-bottom: 16px;
+    padding-bottom: 8px;
+  }
+
+  .header h1 {
+    font-size: 20px;
+  }
+
+  .section {
+    padding: 10px 12px;
+  }
+
+  .section h2 {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+
+  .form {
+    gap: 12px;
+  }
+
+  input, select, textarea {
+    padding: 8px;
+    font-size: 13px;
+  }
+
+  .saveButton {
+    padding: 10px 16px;
+    font-size: 13px;
+  }
+}
+
+/* Tablet devices (768px - 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .container {
+    margin: 30px auto;
+    padding: 20px;
+    max-width: 500px;
+  }
+
+  .header h1 {
+    font-size: 26px;
+  }
+
+  .section h2 {
+    font-size: 19px;
+  }
+}
+
+/* Large tablets and small desktops (1025px - 1200px) */
+@media (min-width: 1025px) and (max-width: 1200px) {
+  .container {
+    max-width: 550px;
+  }
+}
+
+/* Large desktops (1201px and above) */
+@media (min-width: 1201px) {
+  .container {
+    max-width: 600px;
+  }
+}
+
+/* Mobile landscape orientation */
+@media (max-width: 767px) and (orientation: landscape) {
+  .container {
+    margin: 15px auto;
+    padding: 14px;
+  }
+
+  .header {
+    margin-bottom: 16px;
+  }
+
+  .form {
+    gap: 14px;
+  }
+}
+
+/* Touch devices optimization */
+@media (hover: none) and (pointer: coarse) {
+  .saveButton {
+    min-height: 44px;
+    padding: 12px 24px;
+  }
+
+  input, select, textarea {
+    min-height: 44px;
+    padding: 12px;
+  }
+}
+
+/* High DPI displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .container {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+  }
+}
